@@ -1,7 +1,7 @@
 {
   "elmType": "div",
   "attributes": {
-    "class": "=if([$RequestStatus] == 'Approved', 'ms-bgColor-teal', if([$RequestStatus] == 'Pending', 'ms-bgColor-gray130', if([$RequestStatus] == 'Rejected', 'ms-bgColor-redDark', if([$RequestStatus] == 'Withdrawn', 'ms-bgColor-yellow','ms-bgColor-gray130'))))"
+    "class": "=if([$Status] == 'In Progress', 'ms-bgColor-blue', if([$Status] == 'Request Complete', 'ms-bgColor-green', if([$Status] == 'Equipment Checked Out', 'ms-bgColor-yellow', if([$Status] == 'Pending Pickup', 'ms-bgColor-orange', if([$Status] == 'Delayed', 'ms-bgColor-red', if([$Status] == 'Blocked', 'ms-bgColor-gray130', 'ms-bgColor-gray130'))))))"
   },
   "style": {
     "width": "99%",
@@ -24,7 +24,7 @@
         {
           "elmType": "div",
           "attributes": {
-            "iconName": "CRMCustomerInsightsApp",
+            "iconName": "=if([$Status] == 'In Progress', 'ProgressRingDots', if([$Status] == 'Request Complete', 'CheckMark', if([$Status] == 'Equipment Checked Out', 'DeliveryTruck', if([$Status] == 'Pending Pickup', 'Clock', if([$Status] == 'Delayed', 'Warning', if([$Status] == 'Blocked', 'ErrorBadge', 'Info'))))))",
             "class": "ms-fontSize-42 ms-fontWeight-regular ms-fontColor-white",
             "title": "Details"
           },
@@ -76,7 +76,7 @@
                   "elmType": "span",
                   "attributes": {
                     "class": "ms-fontSize-16 ms-fontColor-white",
-                    "iconName": "=if([$RequestStatus] == 'Approved', 'SkypeCircleCheck', if([$RequestStatus] == 'Pending', 'ProgressRingDots', if([$RequestStatus] == 'Rejected', 'StatusErrorFull', if([$RequestStatus] == 'Withdrawn', 'IncidentTriangle','ProgressRingDots'))))"
+                    "iconName": "=if([$Status] == 'In Progress', 'ProgressRingDots', if([$Status] == 'Request Complete', 'CheckMark', if([$Status] == 'Equipment Checked Out', 'DeliveryTruck', if([$Status] == 'Pending Pickup', 'Clock', if([$Status] == 'Delayed', 'Warning', if([$Status] == 'Blocked', 'ErrorBadge', 'Info'))))))"
                   }
                 },
                 {
@@ -88,7 +88,7 @@
                     "padding-right": "8px",
                     "padding-left": "8px"
                   },
-                  "txtContent": "='Request Status: ' + [$RequestStatus]"
+                  "txtContent": "='Status: ' + [$Status]"
                 }
               ]
             }
