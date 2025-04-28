@@ -10,6 +10,6 @@
     "justify-content": "center"
   },
   "attributes": {
-    "class": "=if([$Status] == 'Done', 'ms-borderColor-greenLight', if([$Status] == 'Working on it', 'ms-borderColor-blueLight', if([$Status] == 'Thinking about it', 'ms-borderColor-neutralLight', if([$Status] == 'Nevermind', 'ms-borderColor-yellow', 'ms-borderColor-orangeLight')))) + ' ms-fontColor-neutralPrimary'"
+    "class": "=if([$Status] == 'Request Complete', 'ms-borderColor-greenLight', if([$Status] == 'In Progress', 'ms-borderColor-blueLight', if([$Status] == 'Equipment Checked Out', 'ms-borderColor-yellowLight', if([$Status] == 'Pending Pickup', 'ms-borderColor-gold', if([$Status] == 'Delayed', 'ms-borderColor-redLight', if([$Status] == 'Blocked', 'ms-borderColor-redLight', 'ms-borderColor-neutralLight'))))))"
   }
 }
