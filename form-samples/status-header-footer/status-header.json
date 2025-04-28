@@ -8,7 +8,7 @@
       "font-size": "24px"
   },
   "attributes": {
-      "class": "=if([$Status] == 'Done', 'ms-bgColor-greenLight', if([$Status] == 'Working on it', 'ms-bgColor-blueLight', if([$Status] == 'Thinking about it', 'ms-bgColor-neutralLight', if([$Status] == 'Nevermind', 'ms-bgColor-yellow', 'ms-bgColor-orangeLight')))) + ' ms-fontColor-neutralPrimary'"
+      "class": "=if([$Status] == 'Request Complete', 'ms-bgColor-greenLight', if([$Status] == 'In Progress', 'ms-bgColor-blueLight', if([$Status] == 'Equipment Checked Out', 'ms-bgColor-yellowLight', if([$Status] == 'Pending Pickup', 'ms-bgColor-orangeLight', if([$Status] == 'Delayed', 'ms-bgColor-redLight', if([$Status] == 'Blocked', 'ms-bgColor-grayLight', 'ms-bgColor-neutralLight'))))))"
   },
   "children": [
       {
@@ -18,7 +18,7 @@
       {
           "elmType": "div",
           "attributes": {
-              "iconName": "=if([$Status] == 'Done', 'CompletedSolid', if([$Status] == 'Working on it', 'PinnedSolid', if([$Status] == 'Thinking about it', 'TestBeakerSolid', if([$Status] == 'Nevermind', 'WarningSolid', 'Blocked2Solid'))))",
+              "iconName": "=if([$Status] == 'Request Complete', 'CompletedSolid', if([$Status] == 'In Progress', 'PinnedSolid', if([$Status] == 'Equipment Checked Out', 'DeliveryTruck', if([$Status] == 'Pending Pickup', 'Clock', if([$Status] == 'Delayed', 'Error', if([$Status] == 'Blocked', 'BlockedSite', 'Info'))))))",
               "title": "[$Status]"
           }
       }
