@@ -8,7 +8,7 @@
       "font-size": "24px"
   },
   "attributes": {
-      "class": "=if([$Status] == 'Request Complete', 'ms-bgColor-greenLight', if([$Status] == 'In Progress', 'ms-bgColor-blueLight', if([$Status] == 'Equipment Checked Out', 'ms-bgColor-yellowLight', if([$Status] == 'Pending Pickup', 'ms-bgColor-orangeLight', if([$Status] == 'Delayed', 'ms-bgColor-redLight', if([$Status] == 'Blocked', 'ms-bgColor-grayLight', 'ms-bgColor-neutralLight'))))))"
+      "class": "=if([$Status] == 'Request Complete', 'ms-bgColor-greenLight', if([$Status] == 'In Progress', 'ms-bgColor-blueLight', if([$Status] == 'Equipment Checked Out', 'ms-bgColor-yellowLight', if([$Status] == 'Pending Pickup', 'ms-bgColor-gold', if([$Status] == 'Delayed', 'ms-bgColor-redLight', if([$Status] == 'Blocked', 'ms-bgColor-redLight', 'ms-bgColor-neutralLight'))))))"
   },
   "children": [
       {
